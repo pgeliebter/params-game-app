@@ -1,0 +1,2 @@
+class ParamNamesController < ApplicationController
+end
