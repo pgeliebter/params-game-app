@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "/guess_game" => "param_names#game"
   get "/segment_game/:num/" => "param_names#segment_game"
   post "/body_params" => "param_names#body_game"
+  post "/login" => "param_names#login"
 end
