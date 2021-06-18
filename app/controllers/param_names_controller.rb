@@ -21,7 +21,22 @@ class ParamNamesController < ApplicationController
     else
     end
   end
+
   def segment_game
+    input = params["num"].to_i
+    if input == 0
+      render json: { message: "enter a number at the end of the url with '?num=' between 1 and 100 " }
+    elsif input == 33
+      render json: { message: "You win!!!!" }
+    elsif input < 33
+      render json: { message: "too low" }
+    elsif input > 33
+      render json: { message: "too high" }
+    else
+    end
+  end
+
+  def body_game
     input = params["num"].to_i
     if input == 0
       render json: { message: "enter a number at the end of the url with '?num=' between 1 and 100 " }
